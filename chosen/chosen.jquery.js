@@ -313,7 +313,7 @@ Copyright (c) 2011 by Harvest
         name: match[1] || "",
         version: match[2] || "0"
       };
-      if (browser.name === "msie" && (browser.version === "6.0" || (browser.version === "7.0" && document.documentMode === 7))) {
+      if (browser.name === "msie" && browser.version === "6.0") {
         return this;
       }
       return this.each(function(input_field) {
@@ -331,7 +331,7 @@ Copyright (c) 2011 by Harvest
     __extends(Chosen, _super);
 
     function Chosen() {
-      Chosen.__super__.constructor.apply(this, arguments);
+      return Chosen.__super__.constructor.apply(this, arguments);
     }
 
     Chosen.prototype.setup = function() {
